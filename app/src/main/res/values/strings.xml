@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Velez-Malaga Info</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="Velez">Vélez-Málaga</string>
+    <string name="Torre">Torre del Mar</string>
+    <string name="Almayate">Almayate</string>
+    <string name="Caleta">Caleta de Vélez</string>
+    <string name="Benajarafe">Benajarafe</string>
+</resources>
