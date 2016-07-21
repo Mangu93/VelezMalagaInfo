@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -73,17 +74,33 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        switch (id) {
+            case R.id.velez:
+                Toast.makeText(getApplicationContext(), "Velez", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.torre:
 
-        } else if (id == R.id.nav_slideshow) {
+                break;
+            case R.id.caleta:
 
-        } else if (id == R.id.nav_manage) {
+                break;
+            case R.id.almayate:
 
-        } else if (id == R.id.nav_share) {
+                break;
+            case R.id.benajarafe:
 
-        } else if (id == R.id.nav_send) {
+                break;
+            case R.id.chilches:
+
+                break;
+
+            case R.id.lagos:
+
+                break;
+
+            default:
+
+                break;
 
         }
 

@@ -11,4 +11,12 @@
     <string name="Almayate">Almayate</string>
     <string name="Caleta">Caleta de Vélez</string>
     <string name="Benajarafe">Benajarafe</string>
+    <string name="Chilches">Chilches</string>
+    <string name="Lagos">Lagos</string>
+    <string name="info">Información sobre el pueblo.</string>
+    <string name="info_general">Información general</string>
+    <string name="tlf">Telefonos útiles</string>
+    <string name="playas">Estado de las playas</string>
+    <string name="historia">Historia del pueblo</string>
+    <string name="transporte">Transporte</string>
 </resources>
