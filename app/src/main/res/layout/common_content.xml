@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
@@ -10,34 +11,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.mangu.velez_malagainfo.MainActivity"
-    tools:showIn="@layout/app_bar_main">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/info_general"
-        android:id="@+id/tv_infogeneral"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
+    >
     <LinearLayout
         android:orientation="vertical"
-        android:layout_below="@+id/tv_infogeneral"
-        android:layout_alignLeft="@+id/tv_infogeneral"
-        android:layout_alignStart="@+id/tv_infogeneral"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignRight="@+id/tv_infogeneral"
-        android:layout_alignEnd="@+id/tv_infogeneral"
+
         android:id="@+id/linearLayout">
         <View
             android:layout_width="fill_parent"
             android:layout_height="20dp"
             android:background="#ffffff"/>
         <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_tlf"
+            android:id="@+id/btn_puntos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
@@ -50,7 +37,7 @@
             fancy:fb_focusColor="#9bd823"
             fancy:fb_iconPosition="left"
             fancy:fb_radius="30dp"
-            fancy:fb_text="@string/tlf"
+            fancy:fb_text="@string/puntos"
             fancy:fb_textColor="#FFFFFF">
         </mehdi.sakout.fancybuttons.FancyButton>
         <View
@@ -58,7 +45,7 @@
             android:layout_height="20dp"
             android:background="#ffffff"/>
         <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_playas"
+            android:id="@+id/btn_cercano"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
@@ -71,7 +58,7 @@
             fancy:fb_focusColor="#9bd823"
             fancy:fb_iconPosition="left"
             fancy:fb_radius="30dp"
-            fancy:fb_text="@string/playas"
+            fancy:fb_text="@string/transporte_cercano"
             fancy:fb_textColor="#FFFFFF">
         </mehdi.sakout.fancybuttons.FancyButton>
         <View
@@ -79,7 +66,7 @@
             android:layout_height="20dp"
             android:background="#ffffff"/>
         <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_historia"
+            android:id="@+id/btn_comprar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
@@ -92,51 +79,14 @@
             fancy:fb_focusColor="#9bd823"
             fancy:fb_iconPosition="left"
             fancy:fb_radius="30dp"
-            fancy:fb_text="@string/historia"
+            fancy:fb_text="@string/compras"
             fancy:fb_textColor="#FFFFFF">
         </mehdi.sakout.fancybuttons.FancyButton>
         <View
             android:layout_width="fill_parent"
             android:layout_height="20dp"
             android:background="#ffffff"/>
-        <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_transporte"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp"
-            fancy:fb_borderColor="#FFFFFF"
-            fancy:fb_borderWidth="1dp"
-            fancy:fb_defaultColor="#7ab800"
-            fancy:fb_focusColor="#9bd823"
-            fancy:fb_iconPosition="left"
-            fancy:fb_radius="30dp"
-            fancy:fb_text="@string/transporte"
-            fancy:fb_textColor="#FFFFFF">
-        </mehdi.sakout.fancybuttons.FancyButton>
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:background="#ffffff"/>
-        <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_cortes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp"
-            fancy:fb_borderColor="#FFFFFF"
-            fancy:fb_borderWidth="1dp"
-            fancy:fb_defaultColor="#7ab800"
-            fancy:fb_focusColor="#9bd823"
-            fancy:fb_iconPosition="left"
-            fancy:fb_radius="30dp"
-            fancy:fb_text="@string/cortes"
-            fancy:fb_textColor="#FFFFFF">
-        </mehdi.sakout.fancybuttons.FancyButton>
+
     </LinearLayout>
 
     <ImageView
@@ -144,9 +94,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/logo"
+        android:layout_alignParentBottom = "true"
+        android:contentDescription="Logo del pueblo"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/linearLayout" />
-
-
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

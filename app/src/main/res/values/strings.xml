@@ -19,4 +19,23 @@
     <string name="playas">Estado de las playas</string>
     <string name="historia">Historia del pueblo</string>
     <string name="transporte">Transporte</string>
+    <string name="puntos">Monumentos destacados</string>
+    <string name="transporte_cercano">Transportes cercanos</string>
+    <string name="compras">Zonas para comprar</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="cortes">Cortes de tráfico</string>
+    <string name="prediccion">Predicción</string>
+    <string name="dia">Día</string>
+    <string name="oleaje">Oleaje</string>
+    <string name="viento">Viento</string>
+    <string name="sensacion_termica">Sensación termica</string>
+    <string name="uv_max">UV máximo</string>
+    <string name="estado_cielo">Estado del cielo</string>
+    <string name="temp_maxima">Temperatura máxima</string>
+    <string name="temp_agua">Temperatura del agua</string>
+    <string name="mañana">Mañana</string>
+    <string name="tarde">Tarde</string>
+    <string name="esperando">Esperando la informacion</string>
+    <string name="xml_tiempo">http://www.aemet.es/xml/playas/play_v2_2909406.xml</string>
+    <string name="url_trafico">http://www.velezmalaga.es/index.php?mod=policia_local_proteccion_ci&amp;tag=cortes-de-trafico</string>
 </resources>

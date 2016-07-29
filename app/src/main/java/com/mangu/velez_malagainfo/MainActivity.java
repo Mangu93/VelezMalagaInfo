@@ -1,5 +1,7 @@
 package com.mangu.velez_malagainfo;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -7,12 +9,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.mangu.velez_malagainfo.Informacion.CortesActivity;
+import com.mangu.velez_malagainfo.Pueblos.VelezActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import mehdi.sakout.fancybuttons.FancyButton;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,6 +33,18 @@ public class MainActivity extends AppCompatActivity
     NavigationView navView;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+    @BindView(R.id.btn_tlf)
+    FancyButton btnTlf;
+    @BindView(R.id.btn_playas)
+    FancyButton btnPlayas;
+    @BindView(R.id.btn_historia)
+    FancyButton btnHistoria;
+    @BindView(R.id.btn_transporte)
+    FancyButton btnTransporte;
+    @BindView(R.id.linearLayout)
+    LinearLayout linearLayout;
+    @BindView(R.id.imageView)
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +95,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Intent intent;
+        Context context = getApplicationContext();
         int id = item.getItemId();
         switch (id) {
             case R.id.velez:
-                Toast.makeText(getApplicationContext(), "Velez", Toast.LENGTH_LONG).show();
+                intent = new Intent(context, VelezActivity.class);
+                startActivity(intent);
                 break;
             case R.id.torre:
 
@@ -107,5 +132,26 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @OnClick({R.id.btn_tlf, R.id.btn_playas, R.id.btn_historia, R.id.btn_transporte, R.id.imageView, R.id.btn_cortes})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_tlf:
+                break;
+            case R.id.btn_playas:
+                break;
+            case R.id.btn_historia:
+                break;
+            case R.id.btn_transporte:
+                break;
+            case R.id.imageView:
+                break;
+            case R.id.btn_cortes:
+                startActivity(new Intent(getApplicationContext(), CortesActivity.class));
+                break;
+            default:
+                Log.e("onClick",Integer.toString(view.getId()));
+        }
     }
 }
