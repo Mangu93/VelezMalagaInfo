@@ -4,7 +4,10 @@ import android.util.Pair;
 
 import com.mangu.velez_malagainfo.R;
 
+import java.util.Locale;
+
 import butterknife.BindString;
+import butterknife.ButterKnife;
 
 /**
  * Created by Adrian Portillo on 29/07/2016.
@@ -19,24 +22,37 @@ public class Prediccion {
     private int uv_maximo;//10 es muy alto
     private int temperatura_agua;
     private int temperatura_maxima;
-    @BindString(R.string.dia) String dia;
-    @BindString(R.string.temp_agua) String agua;
-    @BindString(R.string.prediccion) String prediccion;
-    @BindString(R.string.temp_maxima) String maxima;
-    @BindString(R.string.oleaje) String oleaje;
-    @BindString(R.string.viento) String viento;
-    @BindString(R.string.sensacion_termica) String sensacion;
-    @BindString(R.string.uv_max) String uv_max;
-    @BindString(R.string.estado_cielo) String cielo;
-    @BindString(R.string.mañana) String mañana;
-    @BindString(R.string.tarde) String tarde;
+    String dia;
+    String agua;
+    String maxima;
+    String oleaje;
+    String viento;
+    String sensacion;
+    String uv_max;
+    String cielo;
+    String mañana;
+    String tarde;
     public Prediccion() {
 
     }
+
+    public Prediccion(String dia, String agua, String maxima, String oleaje, String viento, String sensacion, String uv_max, String cielo, String mañana, String tarde) {
+        this.dia=dia;
+        this.agua=agua;
+        this.maxima=maxima;
+        this.oleaje=oleaje;
+        this.viento=viento;
+        this.sensacion=sensacion;
+        this.uv_max=uv_max;
+        this.cielo=cielo;
+        this.mañana=mañana;
+        this.tarde=tarde;
+    }
+
     public String presentacion() {
         return dia + " : " + getFecha() + ". "+maxima+": "+getTemperatura_maxima()+". "+agua+": "+getTemperatura_agua()
-                +". "+sensacion+": "+getSensacion_termica()+". "+uv_max+": "+getUv_maximo()+". "+oleaje+": "+mañana + getOleaje_mañana()
-                +" , "+ tarde + getOleaje_tarde() + ". "+viento+": "+mañana+ getViento_mañana() + ", "+tarde + getViento_tarde() +". ";
+                +". "+sensacion+": "+getSensacion_termica()+". "+uv_max+": "+getUv_maximo()+". "+oleaje+": "+mañana +" -> " + getOleaje_mañana()
+                +" , "+ tarde + " -> " + getOleaje_tarde() + ". "+viento+": "+mañana+" " +getViento_mañana() + ", "+tarde + " " + getViento_tarde() +". ";
     }
 
     public String getFecha() {
@@ -51,19 +67,47 @@ public class Prediccion {
     }
 
     public String getOleaje_mañana() {
+
         return oleaje_mañana;
     }
 
     public void setOleaje_mañana(String oleaje_mañana) {
-        this.oleaje_mañana = oleaje_mañana;
+        if(oleaje_mañana.contains("bil")){
+            if(Locale.getDefault().getDisplayName().contains("English")){
+                this.oleaje_mañana="Weak";
+            }else{
+                this.oleaje_mañana="Debil";
+            }
+        }
+        else{
+            if(Locale.getDefault().getDisplayName().contains("English")){
+                this.oleaje_mañana="Strong";
+            }else{
+                this.oleaje_mañana="Fuerte";
+            }
+        }
     }
 
     public String getOleaje_tarde() {
+        if(oleaje_tarde==null) return "No info";
         return oleaje_tarde;
     }
 
     public void setOleaje_tarde(String oleaje_tarde) {
-        this.oleaje_tarde = oleaje_tarde;
+        if(oleaje_tarde.contains("bil")){
+            if(Locale.getDefault().getDisplayName().contains("English")){
+                this.oleaje_mañana="Weak";
+            }else{
+                this.oleaje_mañana="Debil";
+            }
+        }
+        else{
+            if(Locale.getDefault().getDisplayName().contains("English")){
+                this.oleaje_mañana="Strong";
+            }else{
+                this.oleaje_mañana="Fuerte";
+            }
+        }
     }
 
     public String getSensacion_termica() {

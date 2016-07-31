@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"
@@ -39,7 +40,10 @@
             android:name=".Mapa.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".Informacion.CortesActivity" />
-        <activity android:name=".Informacion.PlayasActivity"></activity>
+        <activity android:name=".Informacion.PlayasActivity" />
+        <activity android:name=".Informacion.NoticiasActivity" />
+        <activity android:name=".Informacion.HistoriaActivity"/>
+        <activity android:name=".Informacion.TelefonosActivity"></activity>
     </application>
 
 </manifest>

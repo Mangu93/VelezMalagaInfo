@@ -18,6 +18,7 @@
     <string name="tlf">Telefonos útiles</string>
     <string name="playas">Estado de las playas</string>
     <string name="historia">Historia del pueblo</string>
+    <string name="noticias">Noticias</string>
     <string name="transporte">Transporte</string>
     <string name="puntos">Monumentos destacados</string>
     <string name="transporte_cercano">Transportes cercanos</string>
@@ -38,4 +39,26 @@
     <string name="esperando">Esperando la informacion</string>
     <string name="xml_tiempo">http://www.aemet.es/xml/playas/play_v2_2909406.xml</string>
     <string name="url_trafico">http://www.velezmalaga.es/index.php?mod=policia_local_proteccion_ci&amp;tag=cortes-de-trafico</string>
+    <string name="url_noticias">http://www.velezmalaga.es/index.php?mod=noticias</string>
+    <string name="url_base">http://www.velezmalaga.es/</string>
+    <string name="no_conexion">No se ha podido descargar la información, compruebe su conexión a Internet.</string>
+    <string name="logo_del_pueblo">Logo del pueblo</string>
+    <string name="atencion">Teléfonos de atención ciudadana:</string>
+    <string-array name="atencionciudadana">
+
+        <item name="Vélez-Málaga">900 72 05 25</item>
+        <item name="Torre Del Mar">952 54 04 71</item>
+        <item name="Caleta">952 00 22 32</item>
+        <item name="Almayate">952 55 64 13</item>
+        <item name="Benajarafe">952 51 38 27</item>
+        <item name="Cajiz">952 51 06 71</item>
+        <item name="Chilches">952 51 71 24</item>
+        <item name="Mezquitilla">952 55 02 83</item>
+    </string-array>
+    <string name="taxis">Teléfonos de taxis:</string>
+    <string-array name="taxis_tlf">
+        <item>622 02 20 40</item>
+        <item>650 92 09 58</item>
+        <item>659 15 50 54</item>
+    </string-array>
 </resources>

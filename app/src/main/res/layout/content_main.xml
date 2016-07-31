@@ -11,6 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.mangu.velez_malagainfo.MainActivity"
+    android:background="#ffffff"
     tools:showIn="@layout/app_bar_main">
 
     <TextView
@@ -100,7 +101,7 @@
             android:layout_height="20dp"
             android:background="#ffffff"/>
         <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_transporte"
+            android:id="@+id/btn_noticias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
@@ -113,7 +114,7 @@
             fancy:fb_focusColor="#9bd823"
             fancy:fb_iconPosition="left"
             fancy:fb_radius="30dp"
-            fancy:fb_text="@string/transporte"
+            fancy:fb_text="@string/noticias"
             fancy:fb_textColor="#FFFFFF">
         </mehdi.sakout.fancybuttons.FancyButton>
         <View

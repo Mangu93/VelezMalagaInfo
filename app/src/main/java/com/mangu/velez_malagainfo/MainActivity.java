@@ -17,6 +17,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.mangu.velez_malagainfo.Informacion.CortesActivity;
+import com.mangu.velez_malagainfo.Informacion.HistoriaActivity;
+import com.mangu.velez_malagainfo.Informacion.NoticiasActivity;
+import com.mangu.velez_malagainfo.Informacion.PlayasActivity;
+import com.mangu.velez_malagainfo.Informacion.TelefonosActivity;
 import com.mangu.velez_malagainfo.Pueblos.VelezActivity;
 
 import butterknife.BindView;
@@ -32,14 +36,14 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.nav_view)
     NavigationView navView;
     @BindView(R.id.drawer_layout)
-    DrawerLayout drawerLayout;
+    protected DrawerLayout drawerLayout;
     @BindView(R.id.btn_tlf)
     FancyButton btnTlf;
     @BindView(R.id.btn_playas)
     FancyButton btnPlayas;
     @BindView(R.id.btn_historia)
     FancyButton btnHistoria;
-    @BindView(R.id.btn_transporte)
+    @BindView(R.id.btn_noticias)
     FancyButton btnTransporte;
     @BindView(R.id.linearLayout)
     LinearLayout linearLayout;
@@ -134,16 +138,20 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @OnClick({R.id.btn_tlf, R.id.btn_playas, R.id.btn_historia, R.id.btn_transporte, R.id.imageView, R.id.btn_cortes})
+    @OnClick({R.id.btn_tlf, R.id.btn_playas, R.id.btn_historia, R.id.btn_noticias, R.id.imageView, R.id.btn_cortes})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_tlf:
+                startActivity(new Intent(getApplicationContext(), TelefonosActivity.class));
                 break;
             case R.id.btn_playas:
+                startActivity(new Intent(getApplicationContext(), PlayasActivity.class));
                 break;
             case R.id.btn_historia:
+                startActivity(new Intent(getApplicationContext(), HistoriaActivity.class));
                 break;
-            case R.id.btn_transporte:
+            case R.id.btn_noticias:
+                startActivity(new Intent(getApplicationContext(), NoticiasActivity.class));
                 break;
             case R.id.imageView:
                 break;
