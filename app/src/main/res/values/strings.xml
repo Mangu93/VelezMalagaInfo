@@ -1,18 +1,20 @@
 <resources>
-    <string name="app_name">Velez-Malaga Info</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="Velez">Vélez-Málaga</string>
-    <string name="Torre">Torre del Mar</string>
-    <string name="Almayate">Almayate</string>
-    <string name="Caleta">Caleta de Vélez</string>
-    <string name="Benajarafe">Benajarafe</string>
-    <string name="Chilches">Chilches</string>
-    <string name="Lagos">Lagos</string>
+    <string name="app_name" translatable="false">Velez-Malaga Info</string>
+    <string name="creador" translatable="false">adrianmarinportillo@gmail.com</string>
+    <string name="problema">Problema con la aplicación VelezMalaga-Info</string>
+    <string name="enviar">Enviar correo electrónico</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="seleccionar">Seleccione un idioma</string>
+    <string name="action_settings">Cambiar idioma</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="Velez" translatable="false">Vélez-Málaga</string>
+    <string name="Torre" translatable="false">Torre del Mar</string>
+    <string name="Almayate" translatable="false">Almayate</string>
+    <string name="Caleta" translatable="false">Caleta de Vélez</string>
+    <string name="Benajarafe" translatable="false">Benajarafe</string>
+    <string name="Chilches" translatable="false">Chilches</string>
+    <string name="Lagos" translatable="false">Lagos</string>
     <string name="info">Información sobre el pueblo.</string>
     <string name="info_general">Información general</string>
     <string name="tlf">Telefonos útiles</string>
@@ -23,7 +25,9 @@
     <string name="puntos">Monumentos destacados</string>
     <string name="transporte_cercano">Transportes cercanos</string>
     <string name="compras">Zonas para comprar</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="comer">Zonas para comer</string>
+    <string name="desarrollo">En desarrollo</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
     <string name="cortes">Cortes de tráfico</string>
     <string name="prediccion">Predicción</string>
     <string name="dia">Día</string>
@@ -37,12 +41,13 @@
     <string name="mañana">Mañana</string>
     <string name="tarde">Tarde</string>
     <string name="esperando">Esperando la informacion</string>
-    <string name="xml_tiempo">http://www.aemet.es/xml/playas/play_v2_2909406.xml</string>
-    <string name="url_trafico">http://www.velezmalaga.es/index.php?mod=policia_local_proteccion_ci&amp;tag=cortes-de-trafico</string>
-    <string name="url_noticias">http://www.velezmalaga.es/index.php?mod=noticias</string>
-    <string name="url_base">http://www.velezmalaga.es/</string>
+    <string name="xml_tiempo" translatable="false">http://www.aemet.es/xml/playas/play_v2_2909406.xml</string>
+    <string name="url_trafico" translatable="false">http://www.velezmalaga.es/index.php?mod=policia_local_proteccion_ci&amp;tag=cortes-de-trafico</string>
+    <string name="url_noticias" translatable="false">http://www.velezmalaga.es/index.php?mod=noticias</string>
+    <string name="url_base" translatable="false">http://www.velezmalaga.es/</string>
     <string name="no_conexion">No se ha podido descargar la información, compruebe su conexión a Internet.</string>
     <string name="logo_del_pueblo">Logo del pueblo</string>
+    <string name="no_info">No hay información disponible en este momento.</string>
     <string name="atencion">Teléfonos de atención ciudadana:</string>
     <string-array name="atencionciudadana">
 
@@ -56,6 +61,10 @@
         <item name="Mezquitilla">952 55 02 83</item>
     </string-array>
     <string name="taxis">Teléfonos de taxis:</string>
+    <string name="mi_localizacion">Mi localizacion</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="communicate">Ayuda</string>
+    <string name="ayuda">Enviar mail</string>
     <string-array name="taxis_tlf">
         <item>622 02 20 40</item>
         <item>650 92 09 58</item>

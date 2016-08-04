@@ -1,17 +1,7 @@
 package com.mangu.velez_malagainfo.Modelo;
 
-import android.util.Pair;
-
-import com.mangu.velez_malagainfo.R;
-
 import java.util.Locale;
 
-import butterknife.BindString;
-import butterknife.ButterKnife;
-
-/**
- * Created by Adrian Portillo on 29/07/2016.
- */
 public class Prediccion {
     private String fecha;
     private String sensacion_termica;
@@ -22,16 +12,16 @@ public class Prediccion {
     private int uv_maximo;//10 es muy alto
     private int temperatura_agua;
     private int temperatura_maxima;
-    String dia;
-    String agua;
-    String maxima;
-    String oleaje;
-    String viento;
-    String sensacion;
-    String uv_max;
-    String cielo;
-    String mañana;
-    String tarde;
+    private String dia;
+    private String agua;
+    private String maxima;
+    private String oleaje;
+    private String viento;
+    private String sensacion;
+    private String uv_max;
+    private String cielo;
+    private String mañana;
+    private String tarde;
     public Prediccion() {
 
     }
@@ -55,7 +45,7 @@ public class Prediccion {
                 +" , "+ tarde + " -> " + getOleaje_tarde() + ". "+viento+": "+mañana+" " +getViento_mañana() + ", "+tarde + " " + getViento_tarde() +". ";
     }
 
-    public String getFecha() {
+    private String getFecha() {
         return fecha;
     }
 
@@ -66,7 +56,7 @@ public class Prediccion {
         this.fecha = day+"-"+month+"-"+year;
     }
 
-    public String getOleaje_mañana() {
+    private String getOleaje_mañana() {
 
         return oleaje_mañana;
     }
@@ -88,7 +78,7 @@ public class Prediccion {
         }
     }
 
-    public String getOleaje_tarde() {
+    private String getOleaje_tarde() {
         if(oleaje_tarde==null) return "No info";
         return oleaje_tarde;
     }
@@ -110,7 +100,7 @@ public class Prediccion {
         }
     }
 
-    public String getSensacion_termica() {
+    private String getSensacion_termica() {
         return sensacion_termica;
     }
 
@@ -118,7 +108,7 @@ public class Prediccion {
         this.sensacion_termica = sensacion_termica;
     }
 
-    public int getTemperatura_agua() {
+    private int getTemperatura_agua() {
         return temperatura_agua;
     }
 
@@ -126,7 +116,7 @@ public class Prediccion {
         this.temperatura_agua = temperatura_agua;
     }
 
-    public int getUv_maximo() {
+    private int getUv_maximo() {
         return uv_maximo;
     }
 
@@ -134,7 +124,7 @@ public class Prediccion {
         this.uv_maximo = uv_maximo;
     }
 
-    public int getTemperatura_maxima() {
+    private int getTemperatura_maxima() {
         return temperatura_maxima;
     }
 
@@ -142,7 +132,7 @@ public class Prediccion {
         this.temperatura_maxima = temperatura_maxima;
     }
 
-    public String getViento_mañana() {
+    private String getViento_mañana() {
         return viento_mañana;
     }
 
@@ -150,7 +140,7 @@ public class Prediccion {
         this.viento_mañana = viento_mañana;
     }
 
-    public String getViento_tarde() {
+    private String getViento_tarde() {
         return viento_tarde;
     }
 

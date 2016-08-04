@@ -114,11 +114,11 @@ public class PlayasActivity extends AppCompatActivity {
         prediccion.setUv_maximo(Integer.parseInt(hoy.getJSONObject("uv_max").toString().split("\\:")[1].replace("}", "")));
         return prediccion.presentacion();
     }
-    public boolean isNetworkAvailable(final Context context) {
+    private boolean isNetworkAvailable(final Context context) {
         final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
         return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }
-    public static String getURLContent(String p_sURL) {
+    private static String getURLContent(String p_sURL) {
         URL oURL;
         URLConnection oConnection;
         BufferedReader oReader;

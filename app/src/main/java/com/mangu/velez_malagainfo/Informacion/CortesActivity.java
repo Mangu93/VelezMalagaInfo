@@ -70,18 +70,24 @@ public class CortesActivity extends AppCompatActivity {
                 TextView textView = new TextView(getApplicationContext());
                 textView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
+                textView.setText(e.text());
                 textView.setTextColor(Color.BLACK);
                 textView.setTypeface(null, Typeface.BOLD_ITALIC);
+                LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)textView.getLayoutParams();
+                params.setMargins(0,20,0,0);
+                textView.setLayoutParams(params);
+
                 textView.setText(e.text());
                 idLlayout.addView(textView);
                 if (e.text().contains("NOTA")) {
                     break; //SHITTY SOLUTION
                 }
             }
+            textView.setVisibility(View.INVISIBLE);
         }
     }
 
-    public boolean isNetworkAvailable(final Context context) {
+    private boolean isNetworkAvailable(final Context context) {
         final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
         return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }

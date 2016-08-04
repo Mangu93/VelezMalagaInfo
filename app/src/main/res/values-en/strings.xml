@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Velez-Malaga Info</string>
+    <string name="atencion">Phone number for citizens:</string>
+    <string name="comer">Eating areas</string>
+    <string name="compras">Shopping areas</string>
+    <string name="cortes">Traffic cuts</string>
+    <string name="desarrollo">In development</string>
+    <string name="dia">Day</string>
+    <string name="esperando">Downloading information.</string>
+    <string name="estado_cielo">Sky conditions</string>
+    <string name="historia">History of the town</string>
+    <string name="info">Information about the town</string>
+    <string name="info_general">General information</string>
+    <string name="logo_del_pueblo">City image</string>
+    <string name="mañana">Tomorrow</string>
+    <string name="mi_localizacion">My location</string>
+    <string name="no_conexion">Unable to download the information, please check your Internet connection</string>
+    <string name="no_info">There is no available information at this time</string>
+    <string name="noticias">News</string>
+    <string name="oleaje">Swell</string>
+    <string name="playas">State of the beaches</string>
+    <string name="prediccion">Prediction</string>
+    <string name="puntos">Outstanding monuments</string>
+    <string name="sensacion_termica">Thermal sensation</string>
+    <string name="siguiente">Next</string>
+    <string name="tarde">Afternoon</string>
+    <string name="taxis">Taxi numbers:</string>
+    <string name="temp_agua">Water temperature</string>
+    <string name="temp_maxima">Máximum temperature</string>
+    <string name="tlf">Useful numbers</string>
+    <string name="transporte">Transportation</string>
+    <string name="transporte_cercano">Nearby transport</string>
+    <string name="uv_max">UV maximum</string>
+    <string name="viento">Wind</string>
+    <string name="action_settings">Change language</string>
+    <string name="seleccionar">Select language</string>
+    <string name="ayuda">Send mail</string>
+    <string name="communicate">Help</string>
+</resources>

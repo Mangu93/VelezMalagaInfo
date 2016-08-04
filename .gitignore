@@ -59,3 +59,6 @@ atlassian-ide-plugin.xml
 
 app/build/
 app/build
+/app/src/main/AndroidManifest.xml
+/app/src/release
+/app/src/release/

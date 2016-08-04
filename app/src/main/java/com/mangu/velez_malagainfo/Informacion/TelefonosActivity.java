@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -54,6 +53,9 @@ public class TelefonosActivity extends AppCompatActivity {
             tlfBtn.setRadius(5);
             tlfBtn.setIconPosition(FancyButton.POSITION_LEFT);
             tlfBtn.setFontIconSize(30);
+            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)tlfBtn.getLayoutParams();
+            params.setMargins(0,20,0,0);
+            tlfBtn.setLayoutParams(params);
             tlfBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -76,6 +78,9 @@ public class TelefonosActivity extends AppCompatActivity {
             tlfBtn.setRadius(5);
             tlfBtn.setIconPosition(FancyButton.POSITION_LEFT);
             tlfBtn.setFontIconSize(30);
+            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)tlfBtn.getLayoutParams();
+            params.setMargins(0,20,0,0);
+            tlfBtn.setLayoutParams(params);
             tlfBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

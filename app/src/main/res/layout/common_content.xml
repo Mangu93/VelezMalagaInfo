@@ -3,7 +3,6 @@
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -11,8 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    >
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <LinearLayout
         android:orientation="vertical"
 
@@ -87,7 +85,27 @@
             android:layout_width="fill_parent"
             android:layout_height="20dp"
             android:background="#ffffff"/>
-
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_comer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="#7ab800"
+            fancy:fb_focusColor="#9bd823"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="@string/comer"
+            fancy:fb_textColor="#FFFFFF">
+        </mehdi.sakout.fancybuttons.FancyButton>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:background="#ffffff"/>
     </LinearLayout>
 
     <ImageView
