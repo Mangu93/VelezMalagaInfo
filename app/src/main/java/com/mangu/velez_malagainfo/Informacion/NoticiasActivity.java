@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -77,7 +78,7 @@ public class NoticiasActivity extends AppCompatActivity {
                 final TextView textView = new TextView(getApplicationContext());
                 textView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT));
-                textView.setText(e.text());
+                textView.setText(Html.fromHtml(e.text()+"<br>"));
                 textView.setTextColor(Color.BLACK);
                 textView.setTypeface(null, Typeface.BOLD_ITALIC);
                 LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)textView.getLayoutParams();

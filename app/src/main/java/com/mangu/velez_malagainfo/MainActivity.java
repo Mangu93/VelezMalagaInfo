@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity
         alert.show();
     }
 
-    public void changeLocale(Locale locale) {
+    private void changeLocale(Locale locale) {
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;

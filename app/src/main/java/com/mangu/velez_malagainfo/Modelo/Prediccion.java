@@ -22,27 +22,28 @@ public class Prediccion {
     private String cielo;
     private String mañana;
     private String tarde;
+
     public Prediccion() {
 
     }
 
     public Prediccion(String dia, String agua, String maxima, String oleaje, String viento, String sensacion, String uv_max, String cielo, String mañana, String tarde) {
-        this.dia=dia;
-        this.agua=agua;
-        this.maxima=maxima;
-        this.oleaje=oleaje;
-        this.viento=viento;
-        this.sensacion=sensacion;
-        this.uv_max=uv_max;
-        this.cielo=cielo;
-        this.mañana=mañana;
-        this.tarde=tarde;
+        this.dia = dia;
+        this.agua = agua;
+        this.maxima = maxima;
+        this.oleaje = oleaje;
+        this.viento = viento;
+        this.sensacion = sensacion;
+        this.uv_max = uv_max;
+        this.cielo = cielo;
+        this.mañana = mañana;
+        this.tarde = tarde;
     }
 
     public String presentacion() {
-        return dia + " : " + getFecha() + ". "+maxima+": "+getTemperatura_maxima()+". "+agua+": "+getTemperatura_agua()
-                +". "+sensacion+": "+getSensacion_termica()+". "+uv_max+": "+getUv_maximo()+". "+oleaje+": "+mañana +" -> " + getOleaje_mañana()
-                +" , "+ tarde + " -> " + getOleaje_tarde() + ". "+viento+": "+mañana+" " +getViento_mañana() + ", "+tarde + " " + getViento_tarde() +". ";
+        return dia + " : " + getFecha() + ".<br>" + maxima + ": " + getTemperatura_maxima()+"º" + ".<br>" + agua + ": " + getTemperatura_agua() +"º"
+                + ".<br>" + sensacion + ": " + getSensacion_termica() + ".<br>" + uv_max + ": " + getUv_maximo() + ".<br>" + oleaje + ": " + mañana + " -> " + getOleaje_mañana()
+                + " , " + tarde + " -> " + getOleaje_tarde() + ".<br>" + viento + ": " + mañana + " -> " + getViento_mañana() + ", " + tarde + " " + getViento_tarde() + ".<br>";
     }
 
     private String getFecha() {
@@ -50,10 +51,10 @@ public class Prediccion {
     }
 
     public void setFecha(String fecha) {
-        String year = fecha.substring(0,4);
-        String month = fecha.substring(4,6);
+        String year = fecha.substring(0, 4);
+        String month = fecha.substring(4, 6);
         String day = fecha.substring(6);
-        this.fecha = day+"-"+month+"-"+year;
+        this.fecha = day + "-" + month + "-" + year;
     }
 
     private String getOleaje_mañana() {
@@ -62,40 +63,38 @@ public class Prediccion {
     }
 
     public void setOleaje_mañana(String oleaje_mañana) {
-        if(oleaje_mañana.contains("bil")){
-            if(Locale.getDefault().getDisplayName().contains("English")){
-                this.oleaje_mañana="Weak";
-            }else{
-                this.oleaje_mañana="Debil";
+        if (oleaje_mañana.contains("bil")) {
+            if (Locale.getDefault().getDisplayName().contains("English")) {
+                this.oleaje_mañana = "Weak";
+            } else {
+                this.oleaje_mañana = "Debil";
             }
-        }
-        else{
-            if(Locale.getDefault().getDisplayName().contains("English")){
-                this.oleaje_mañana="Strong";
-            }else{
-                this.oleaje_mañana="Fuerte";
+        } else {
+            if (Locale.getDefault().getDisplayName().contains("English")) {
+                this.oleaje_mañana = "Strong";
+            } else {
+                this.oleaje_mañana = "Fuerte";
             }
         }
     }
 
     private String getOleaje_tarde() {
-        if(oleaje_tarde==null) return "No info";
+        if (oleaje_tarde == null) return "No info";
         return oleaje_tarde;
     }
 
     public void setOleaje_tarde(String oleaje_tarde) {
-        if(oleaje_tarde.contains("bil")){
-            if(Locale.getDefault().getDisplayName().contains("English")){
-                this.oleaje_mañana="Weak";
-            }else{
-                this.oleaje_mañana="Debil";
+        if (oleaje_tarde.contains("bil")) {
+            if (Locale.getDefault().getDisplayName().contains("English")) {
+                this.oleaje_tarde = "Weak";
+            } else {
+                this.oleaje_tarde = "Debil";
             }
-        }
-        else{
-            if(Locale.getDefault().getDisplayName().contains("English")){
-                this.oleaje_mañana="Strong";
-            }else{
-                this.oleaje_mañana="Fuerte";
+        } else {
+            if (Locale.getDefault().getDisplayName().contains("English")) {
+                this.oleaje_tarde = "Strong";
+            } else {
+                this.oleaje_tarde = "Fuerte";
             }
         }
     }
@@ -105,7 +104,22 @@ public class Prediccion {
     }
 
     public void setSensacion_termica(String sensacion_termica) {
-        this.sensacion_termica = sensacion_termica;
+        if (sensacion_termica.equalsIgnoreCase("calor moderado")) {
+            if (Locale.getDefault().getDisplayName().contains("English")) {
+                this.sensacion_termica = "Warmth";
+            } else {
+                this.sensacion_termica = sensacion_termica;
+            }
+        } else if (sensacion_termica.equalsIgnoreCase("calor agradable")) {
+            if (Locale.getDefault().getDisplayName().contains("English")) {
+                this.sensacion_termica = "Pleasant warmth";
+            } else {
+                this.sensacion_termica = sensacion_termica;
+            }
+        }else {
+            this.sensacion_termica = sensacion_termica;
+        }
+
     }
 
     private int getTemperatura_agua() {
@@ -137,7 +151,15 @@ public class Prediccion {
     }
 
     public void setViento_mañana(String viento_mañana) {
-        this.viento_mañana = viento_mañana;
+        if (Locale.getDefault().getDisplayName().contains("English")) {
+            if (viento_mañana.equalsIgnoreCase("flojo")) {
+                this.viento_mañana = "Weak";
+            } else if (viento_mañana.equalsIgnoreCase("moderado")) {
+                this.viento_mañana = "Moderate";
+            }
+        } else {
+            this.viento_mañana = (viento_mañana.substring(0,1).toUpperCase())+(viento_mañana.substring(1));
+        }
     }
 
     private String getViento_tarde() {
@@ -145,7 +167,15 @@ public class Prediccion {
     }
 
     public void setViento_tarde(String viento_tarde) {
-        this.viento_tarde = viento_tarde;
+        if (Locale.getDefault().getDisplayName().contains("English")) {
+            if (viento_tarde.equalsIgnoreCase("Flojo")) {
+                this.viento_tarde = "Weak";
+            } else if (viento_tarde.equalsIgnoreCase("Moderado")) {
+                this.viento_tarde = "Moderate";
+            }
+        } else {
+            this.viento_tarde = viento_tarde.substring(0,1).toUpperCase()+(viento_tarde.substring(1));
+        }
     }
 
 

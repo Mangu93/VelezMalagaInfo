@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">Velez-Malaga Info</string>
-    <string name="creador" translatable="false">adrianmarinportillo@gmail.com</string>
-    <string name="problema">Problema con la aplicación VelezMalaga-Info</string>
+    <string name="creador" translatable="false">vmalagainfo@gmail.com</string>
+    <string name="problema" translatable="false">Problema con la aplicación VelezMalaga-Info</string>
     <string name="enviar">Enviar correo electrónico</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
@@ -70,4 +70,5 @@
         <item>650 92 09 58</item>
         <item>659 15 50 54</item>
     </string-array>
+    <string name="atencionciudadana">Atención ciudadana</string>
 </resources>

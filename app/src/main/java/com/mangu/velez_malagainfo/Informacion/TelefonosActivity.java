@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.mangu.velez_malagainfo.R;
 
 import butterknife.BindArray;
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import mehdi.sakout.fancybuttons.FancyButton;
@@ -24,6 +25,8 @@ public class TelefonosActivity extends AppCompatActivity {
     String[] atencion;
     @BindView(R.id.textView2)
     TextView textView2;
+    private final String [] tlf_taxis = {"Vélez-Málaga", "Torre del Mar", "Torre del Mar"};
+    private final String [] pueblos = {"Vélez-Málaga", "Torre del Mar", "Caleta de Velez", "Almayate", "Benajarafe", "Cajiz", "Chilches", "Mezquitilla"};
     @BindView(R.id.textView3)
     TextView textView3;
     @BindView(R.id.linearLayout1)
@@ -40,13 +43,14 @@ public class TelefonosActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT));
         linearLayout2.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT));
-        for (String s : atencion) {
-            final String tlf = s;
+        for (int i = 0; i < atencion.length; i++) {
+            final String tlf = atencion[i];
+            final String name = pueblos[i];
             FancyButton tlfBtn = new FancyButton(this);
             tlfBtn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
 
-            tlfBtn.setText(s);
+            tlfBtn.setText(name + ": " + tlf);
             tlfBtn.setBackgroundColor(Color.parseColor("#3b5998"));
             tlfBtn.setFocusBackgroundColor(Color.parseColor("#5474b8"));
             tlfBtn.setTextSize(17);
@@ -66,12 +70,13 @@ public class TelefonosActivity extends AppCompatActivity {
             });
             linearLayout1.addView(tlfBtn);
         }
-        for (String t : taxis) {
-            final String tlf = t;
+        for (int j = 0; j < taxis.length; j++) {
+            final String tlf = taxis[j];
+            final String name = tlf_taxis[j];
             FancyButton tlfBtn = new FancyButton(this);
             tlfBtn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
-            tlfBtn.setText(t);
+            tlfBtn.setText(name + ": "+tlf);
             tlfBtn.setBackgroundColor(Color.parseColor("#a4c639"));
             tlfBtn.setFocusBackgroundColor(Color.parseColor("#bfe156"));
             tlfBtn.setTextSize(17);

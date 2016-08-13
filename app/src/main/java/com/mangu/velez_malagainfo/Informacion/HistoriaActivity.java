@@ -15,6 +15,7 @@ import com.mangu.velez_malagainfo.R;
 
 import java.util.Locale;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -24,9 +25,7 @@ public class HistoriaActivity extends AppCompatActivity {
     WebView webView;
     private final String en_wiki = "https://en.m.wikipedia.org/wiki/V%C3%A9lez-M%C3%A1laga";
     private final String es_wiki = "https://es.m.wikipedia.org/wiki/V%C3%A9lez-M%C3%A1laga";
-    @BindView(R.id.textView)
-    TextView textView;
-
+    @BindString(R.string.no_conexion) String no_conexion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +38,8 @@ public class HistoriaActivity extends AppCompatActivity {
             } else {
                 webView.loadUrl(es_wiki);
             }
-            textView.setVisibility(View.INVISIBLE);
+        }else{
+            Toast.makeText(getApplicationContext(), no_conexion, Toast.LENGTH_LONG).show();
         }
     }
 

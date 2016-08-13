@@ -138,17 +138,15 @@
             fancy:fb_text="@string/cortes"
             fancy:fb_textColor="#FFFFFF">
         </mehdi.sakout.fancybuttons.FancyButton>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo_del_pueblo" />
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/logo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/logo_del_pueblo"
-        android:layout_alignBottom="@+id/linearLayout" />
+
 
 
 </RelativeLayout>

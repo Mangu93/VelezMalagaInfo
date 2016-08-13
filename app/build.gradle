@@ -1,36 +1,44 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 android {
+    signingConfigs {
+        config {
+            keyAlias 'Final VMI Key'
+            keyPassword '7147d1e3115400589dc0c41da410f4d8'
+            storeFile file('C:/Users/Adrian/.android/debug.keystore')
+            storePassword '6f589ca9ee46f1d5adffbc0bc3e1eddc'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
         applicationId "com.mangu.velez_malagainfo"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName '1.2'
         multiDexEnabled true
 
     }
     buildTypes {
-        debug {
-            debuggable true
-        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
+    }
+    productFlavors {
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile files('libs/volley.jar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/java-json.jar')
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
     // Because RxAndroid releases are few and far between, it is recommended you also
-// explicitly depend on RxJava's latest version for bug fixes and new features.
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
     compile 'org.jsoup:jsoup:1.9.2'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.github.medyo:fancybuttons:1.8.1'

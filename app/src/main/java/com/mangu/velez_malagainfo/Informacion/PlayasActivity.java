@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -83,8 +84,8 @@ public class PlayasActivity extends AppCompatActivity {
                                 JSONObject futuro = array.getJSONObject(1);
                                 String tv_hoy = generarTV(hoy);
                                 String tv_futuro = generarTV(futuro);
-                                tvHoy.setText(tv_hoy);
-                                tvNext.setText(tv_futuro);
+                                tvHoy.setText(Html.fromHtml(tv_hoy+"<br>"));
+                                tvNext.setText(Html.fromHtml(tv_futuro+"<br>"));
                                 tvNext.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                                         LinearLayout.LayoutParams.WRAP_CONTENT));
                                 tvHoy.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
