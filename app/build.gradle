@@ -3,10 +3,7 @@ apply plugin: 'android-apt'
 android {
     signingConfigs {
         config {
-            keyAlias 'Final VMI Key'
-            keyPassword '7147d1e3115400589dc0c41da410f4d8'
-            storeFile file('C:/Users/Adrian/.android/debug.keystore')
-            storePassword '6f589ca9ee46f1d5adffbc0bc3e1eddc'
+            
         }
     }
     compileSdkVersion 23
